@@ -3,72 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TB</title>
+  <title>TB Product Gallery</title>
   <style>
-    /* Center the h1 and make it big */
+    body {
+  font-family: Arial, sans-serif;
+  background-image: url('./image/b.jpeg'); /* Set background image */
+  background-size: cover; /* Ensure it covers the entire page */
+  background-position: center center; /* Center the background image */
+  background-attachment: fixed; /* Make the background stay in place while scrolling */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+    
+
+    /* Top Title */
     h1 {
-      text-align: center;
-      font-size: 100px; /* Adjust the size as needed */
-      margin-top: 50px;
+      font-size: 50px;
+      color: #0084ff;
+      margin-top: 20px;
+      animation: moveText 3s infinite; /* Apply animation */
     }
 
-    /* Center the images */
-    .product-image {
-      display: block;
-      margin: 0 auto;
-      width: 800px; /* Adjust size as needed */
-      height: 800px;
+    @keyframes moveText {
+  0% {
+    transform: translateX(0);
+    color: blue; /* Starting color */
+  }
+  33% {
+    transform: translateX(50px); /* Move right */
+    color: red; /* Color changes to red */
+  }
+  66% {
+    transform: translateX(0); /* Move back to original position */
+    color: black; /* Color changes to black */
+  }
+  100% {
+    transform: translateX(0);
+    color: blue; /* Color goes back to blue */
+  }
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 20px;
+  animation: moveText 3s infinite; /* Apply animation */
+}
+.banner-container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-image: url('./image/b.jpg'); /* Set background image */
+  background-size: cover; /* Ensure it covers the banner section */
+  background-position: center center; /* Center the background image */
+  background-attachment: scroll; /* Make the background scroll with the content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+}
+    
+    .banner-image {
+      width: 100%;
+      max-height: 750px;
       object-fit: cover;
     }
 
-    /* Center the entire gallery */
-    .gallery-container {
-      text-align: center;
-      margin-top: 30px;
+    /* Product Grid */
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Fixed 3-column layout */
+      gap: 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
     }
 
-    /* Optional styling for product cards */
     .product-card {
-      display: inline-block;
-      margin: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
+      padding: 10px;
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .product-title {
+      font-size: 20px;
+      color: #0077ff;
+      margin-top: 10px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: red;
+      margin-top: 5px;
+    }
+
+    .product-description {
+      font-size: 14px;
+      color: #333;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
-  <!-- Centered title -->
-  <h1>ການຈະນາ ມູນດາລາ</h1>
-  
-  <div class="gallery-container">
+
+  <!-- Top Title -->
+  <h1>ຮ້ານ ພີເອັມ ໂອໂຕ ເກດ ເຊີວິດ ສ່ວນບຸກຄົນ</h1>
+
+  <!-- Banner Image -->
+  <div class="banner-container">
+    <img src="./image/x.jpg" alt="Banner Image" class="banner-image">
+  </div>
+
+  <!-- Product Gallery -->
+  <div class="product-gallery">
     <!-- Product Card 1 -->
     <div class="product-card">
-      <img src="./image/s.jpg" alt="Product 1" class="product-image">
-      <div class="product-details">
-        <div class="product-title" style="color: rgb(9, 9, 9); font-size: 50px; font-family: Nuanta;">ເບີ 36-42</div>
-        <div class="product-price" style="color: red; font-size: 50px; font-family: Times;">29,000 k</div>
-        <div class="product-description">ສິນຄ້າມີຢູ່ໃນສາງ</div>
-      </div>
+      <img src="./image/w.jpg" alt="Product 1">
+      <div class="product-title">Product 1</div>
+      <div class="product-price">k</div>
+      <div class="product-description">In Stock</div>
     </div>
 
     <!-- Product Card 2 -->
     <div class="product-card">
-      <img src="./image/a.jpg" alt="Product 2" class="product-image">
-      <div class="product-details">
-        <div class="product-title" style="color: rgb(9, 9, 9); font-size: 50px; font-family: Nuanta;">ເບີ 36-42</div>
-        <div class="product-price" style="color: red; font-size: 50px; font-family: Times;">29,000 k</div>
-        <div class="product-description">ສິນຄ້າມີຢູ່ໃນສາງ</div>
-      </div>
+      <img src="./image/c.jpg" alt="Product 2">
+      <div class="product-title">Product 2</div>
+      <div class="product-price">k</div>
+      <div class="product-description">In Stock</div>
     </div>
 
     <!-- Product Card 3 -->
     <div class="product-card">
-      <img src="./image/x.jpg" alt="Product 3" class="product-image">
-      <div class="product-details">
-        <div class="product-title" style="color: rgb(9, 9, 9); font-size: 50px; font-family: Nuanta;">ເບີ 36-42</div>
-        <div class="product-price" style="color: red; font-size: 50px; font-family: Times;">29,000 k</div>
-        <div class="product-description style="font-size: 50px;">ສິນຄ້າມີຢູ່ໃນສາງ</div>
-      </div>
+      <img src="./image/v.jpg" alt="Product 3">
+      <div class="product-title">Product 3</div>
+      <div class="product-price">k</div>
+      <div class="product-description">Limited Stock</div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <img src="./image/f.jpg" alt="Product 4">
+      <div class="product-title">Product 4</div>
+      <div class="product-price">k</div>
+      <div class="product-description">In Stock</div>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="product-card">
+      <img src="./image/a.jpg" alt="Product 5">
+      <div class="product-title">Product 5</div>
+      <div class="product-price">k</div>
+      <div class="product-description">Limited Stock</div>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="product-card">
+      <img src="./image/z.jpg" alt="Product 6">
+      <div class="product-title">Product 6</div>
+      <div class="product-price">k</div>
+      <div class="product-description">In Stock</div>
     </div>
   </div>
+
 </body>
 </html>
