@@ -1,73 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TB Product Gallery</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@100..900&display=swap" rel="stylesheet">
   <style>
     body {
-  font-family: Arial,'Noto Sans Lao';
-  background-image: url('./image/b.jpeg'); /* Set background image */
-  background-size: cover; /* Ensure it covers the entire page */
-  background-position: center center; /* Center the background image */
-  background-attachment: fixed; /* Make the background stay in place while scrolling */
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-    
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, 'Noto Sans Lao';
+      background-image: url('./image/b.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-    /* Top Title */
     h1 {
       font-size: 50px;
       color: #0084ff;
       margin-top: 20px;
-      animation: moveText 3s infinite; /* Apply animation */
+      animation: moveText 3s infinite;
     }
 
     @keyframes moveText {
-  0% {
-    transform: translateX(0);
-    color: blue; /* Starting color */
-  }
-  33% {
-    transform: translateX(50px); /* Move right */
-    color: red; /* Color changes to red */
-  }
-  66% {
-    transform: translateX(0); /* Move back to original position */
-    color: black; /* Color changes to black */
-  }
-  100% {
-    transform: translateX(0);
-    color: blue; /* Color goes back to blue */
-  }
-}
+      0% { transform: translateX(0); color: blue; }
+      33% { transform: translateX(50px); color: red; }
+      66% { transform: translateX(0); color: black; }
+      100% { transform: translateX(0); color: blue; }
+    }
 
-h1 {
-  font-size: 50px;
-  margin-top: 20px;
-  animation: moveText 3s infinite; /* Apply animation */
-}
-.banner-container {
-  margin: 20px auto;
-  width: 100%;
-  max-width: 800px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-image: url('./image/b.jpg'); /* Set background image */
-  background-size: cover; /* Ensure it covers the banner section */
-  background-position: center center; /* Center the background image */
-  background-attachment: scroll; /* Make the background scroll with the content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding: 10px;
-}
-    
+    .banner-container {
+      align-self: center;
+      width: 100%;
+      max-width: 1000px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-image: url('./image/b.jpg');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 10px;
+    }
+
     .banner-image {
       width: 100%;
       max-height: 750px;
@@ -77,7 +59,7 @@ h1 {
     /* Product Grid */
     .product-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Fixed 3-column layout */
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       max-width: 1000px;
       margin: 50px auto;
@@ -85,9 +67,9 @@ h1 {
     }
 
     .product-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background-color: #fff;
+      border: 1px solid #ff0707;
+      border-radius: 10px;
+      background-color: #ffffff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
       padding: 10px;
@@ -95,90 +77,112 @@ h1 {
 
     .product-card img {
       width: 100%;
-      max-height: 250px;
+      max-height: 2000px;
       object-fit: cover;
       border-radius: 8px;
     }
 
-    .product-title {
-      font-size: 20px;
-      color: #0077ff;
-      margin-top: 10px;
+    @media (max-width: 768px) {
+      .product-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    .product-price {
+    @media (max-width: 480px) {
+      .product-gallery {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .contact a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
       font-size: 18px;
-      color: red;
-      margin-top: 5px;
+      font-weight: bold;
+      color: #1877F2;
+      gap: 10px;
     }
 
-    .product-description {
-      font-size: 14px;
-      color: #333;
-      margin-top: 5px;
+    .contact img {
+      width: 50px;
     }
   </style>
 </head>
+
 <body>
-
-  <!-- Top Title -->
-  <h1>ຮ້ານ ພີເອັມ ໂອໂຕ ເກດ ເຊີວິດ ສ່ວນບຸກຄົນ</h1>
-
-  <!-- Banner Image -->
   <div class="banner-container">
     <img src="./image/x.jpg" alt="Banner Image" class="banner-image">
   </div>
 
-  <!-- Product Gallery -->
   <div class="product-gallery">
-    <!-- Product Card 1 -->
-    <div class="product-card">
-      <img src="./image/w.jpg" alt="Product 1">
-      <div class="product-title">Product 1</div>
-      <div class="product-price">k</div>
-      <div class="product-description">In Stock</div>
-    </div>
-
-    <!-- Product Card 2 -->
-    <div class="product-card">
-      <img src="./image/c.jpg" alt="Product 2">
-      <div class="product-title">Product 2</div>
-      <div class="product-price">k</div>
-      <div class="product-description">In Stock</div>
-    </div>
-
-    <!-- Product Card 3 -->
-    <div class="product-card">
-      <img src="./image/v.jpg" alt="Product 3">
-      <div class="product-title">Product 3</div>
-      <div class="product-price">k</div>
-      <div class="product-description">Limited Stock</div>
-    </div>
-
-    <!-- Product Card 4 -->
-    <div class="product-card">
-      <img src="./image/f.jpg" alt="Product 4">
-      <div class="product-title">Product 4</div>
-      <div class="product-price">k</div>
-      <div class="product-description">In Stock</div>
-    </div>
-
-    <!-- Product Card 5 -->
-    <div class="product-card">
-      <img src="./image/a.jpg" alt="Product 5">
-      <div class="product-title">Product 5</div>
-      <div class="product-price">k</div>
-      <div class="product-description">Limited Stock</div>
-    </div>
-
-    <!-- Product Card 6 -->
-    <div class="product-card">
-      <img src="./image/z.jpg" alt="Product 6">
-      <div class="product-title">Product 6</div>
-      <div class="product-price">k</div>
-      <div class="product-description">In Stock</div>
-    </div>
+    <div class="product-card"><img src="./image/1.jpeg" alt="Product 1"></div>
+    <div class="product-card"><img src="./image/2.jpeg" alt="Product 2"></div>
+    <div class="product-card"><img src="./image/4.jpeg" alt="Product 3"></div>
+    <div class="product-card"><img src="./image/3.jpeg" alt="Product 4"></div>
+    <div class="product-card"><img src="./image/5.jpg" alt="Product 5"></div>
+    <div class="product-card"><img src="./image/6.jpg" alt="Product 6"></div>
+    <div class="product-card"><img src="./image/7.jpg" alt="Product 7"></div>
+    <div class="product-card"><img src="./image/8.jpg" alt="Product 8"></div>
+    <div class="product-card"><img src="./image/9.jpg" alt="Product 9"></div>
   </div>
 
+ <div class="contact">
+    <div style="display: flex; center; max-width: 1000px; margin: 30px auto; padding: 0 20px;">
+      <!-- Facebook Icon (Left) -->
+      <a href="https://www.facebook.com/share/1DMVNCLjdH/?mibextid=LQQJ4d" target="_blank">
+        <img src="./image/download.png" alt="Facebook" width="100px">
+      </a>
+
+      <!-- Centered Text -->
+      <p style="flex-grow: 1; font-size: 18px; display: flex; align-items: center; gap: 6px;">
+        <a href="https://www.facebook.com/share/1DMVNCLjdH/?mibextid=LQQJ4d" target="_blank"
+          style="text-decoration: none; color: #1877F2; font-weight: bold;">
+          ສາມາດ ເບິ່ງຂໍ້ມູນໄດ້ທີ່ນີ່
+        </a>
+      </p>
+    </div>
+    <div style="display: flex; center; max-width: 1000px; margin: 30px auto; padding: 0 20px;">
+      <!-- Facebook Icon (Left) -->
+      <a href="https://wa.me/message/37542Q2IROJNF1" target="_blank">
+        <img
+          src="./image/png-clipart-whatsapp-computer-icons-icon-design-internet-whatsapp-trademark-logo-thumbnail-removebg-preview.png"
+          alt="Facebook" width="100px">
+      </a>
+
+      <!-- Centered Text -->
+      <p style="flex-grow: 1; font-size: 18px; display: flex; align-items: center; gap: 6px;">
+        <a href="https://wa.me/message/37542Q2IROJNF1" target="_blank"
+          style="text-decoration: none; color: #1877F2; font-weight: bold;">
+          ສາມາດ ຕິດຕໍ່ສອບຖາມ
+        </a>
+      </p>
+    </div>
+    <div style="display: flex; center; max-width: 500px; margin: 30px auto; padding: 0 20px;">
+      <!-- Tiktok Icon (Left) -->
+      <a href="https://www.tiktok.com/@pmautogate" target="_blank">
+        <img
+          src="/image/tiktok-removebg-preview.png"
+          alt="tiktok" width="100px">
+      </a>
+
+      <!-- Centered Text -->
+      <p style="flex-grow: 1; font-size: 18px; display: flex; align-items: center; gap: 6px;">
+        <a href="https://www.tiktok.com/@pmautogate" target="_blank"
+          style="text-decoration: none; color: #1877F2; font-weight: bold;">
+          ຜົນງານ ຂອງເຮົາ
+        </a>
+      </p>
+    </div>
+  </div>
 </body>
+
 </html>
