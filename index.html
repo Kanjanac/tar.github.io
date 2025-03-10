@@ -14,127 +14,68 @@
       flex-direction: column;
       font-family: Arial, 'Noto Sans Lao';
       background-image: url('./image/b.jpeg');
-<<<<<<< HEAD
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-=======
-      /* Set background image */
-      background-size: cover;
-      /* Ensure it covers the entire page */
       background-position: center center;
-      /* Center the background image */
       background-attachment: fixed;
-      /* Make the background stay in place while scrolling */
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
       margin: 0;
       padding: 0;
       text-align: center;
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
 
     h1 {
-      font-size: 50px;
+      font-size: 40px;
       color: #0084ff;
       margin-top: 20px;
       animation: moveText 3s infinite;
-<<<<<<< HEAD
-    }
-
-    @keyframes moveText {
-      0% { transform: translateX(0); color: blue; }
-      33% { transform: translateX(50px); color: red; }
-      66% { transform: translateX(0); color: black; }
-      100% { transform: translateX(0); color: blue; }
-=======
-      /* Apply animation */
     }
 
     @keyframes moveText {
       0% {
         transform: translateX(0);
         color: blue;
-        /* Starting color */
       }
-
       33% {
         transform: translateX(50px);
-        /* Move right */
         color: red;
-        /* Color changes to red */
       }
-
       66% {
         transform: translateX(0);
-        /* Move back to original position */
         color: black;
-        /* Color changes to black */
       }
-
       100% {
         transform: translateX(0);
         color: blue;
-        /* Color goes back to blue */
       }
     }
 
-    h1 {
-      font-size: 50px;
-      margin-top: 20px;
-      animation: moveText 3s infinite;
-      /* Apply animation */
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
-    }
-
     .banner-container {
-      align-self: center;
-<<<<<<< HEAD
       width: 100%;
-=======
-      width: 200%;
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
       max-width: 1000px;
       border: 1px solid #ddd;
       border-radius: 8px;
       background-image: url('./image/b.jpg');
-<<<<<<< HEAD
       background-size: cover;
-      background-position: center;
-=======
-      /* Set background image */
-      background-size: cover;
-      /* Ensure it covers the banner section */
       background-position: center center;
-      /* Center the background image */
       background-attachment: scroll;
-      /* Make the background scroll with the content */
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
       padding: 10px;
+      margin: auto;
     }
 
     .banner-image {
       width: 100%;
-      max-height: 750px;
+      max-height: 500px;
       object-fit: cover;
     }
 
-    /* Product Grid */
     .product-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-<<<<<<< HEAD
-=======
-      /* Fixed 3-column layout */
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
       max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
+      margin: 20px auto;
+      padding: 0 10px;
     }
 
     .product-card {
@@ -143,69 +84,50 @@
       background-color: #ffffff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
-      padding: 10px;
+      padding: 5px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     .product-card img {
       width: 100%;
-      max-height: 2000px;
+      max-height: 300px;
       object-fit: cover;
       border-radius: 8px;
-    }
-
-    @media (max-width: 768px) {
-      .product-gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 480px) {
-      .product-gallery {
-        grid-template-columns: repeat(1, 1fr);
-      }
     }
 
     .contact {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
-      margin-top: 20px;
+      gap: 20px;
+      padding: 20px;
     }
 
-    .contact a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      color: #1877F2;
-      gap: 10px;
-    }
-
-    .contact img {
-      width: 50px;
-    }
-    .contact {
-      display: flex;
-      justify-content: space-around;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 30px;
+      }
+      .banner-container {
+        padding: 5px;
+      }
+      .product-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+      .product-card img {
+        max-height: 200px;
+      }
     }
   </style>
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
-  <!-- Banner Image -->
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
   <div class="banner-container">
     <img src="./image/x.jpg" alt="Banner Image" class="banner-image">
   </div>
 
-<<<<<<< HEAD
+  <hr style="height: 10px; width: 80%; background-color: black; border: none; margin: 20px auto;">
+
   <div class="product-gallery">
     <div class="product-card"><img src="./image/1.jpeg" alt="Product 1"></div>
     <div class="product-card"><img src="./image/2.jpeg" alt="Product 2"></div>
@@ -218,7 +140,7 @@
     <div class="product-card"><img src="./image/9.jpg" alt="Product 9"></div>
   </div>
 
- <div class="contact">
+  <div class="contact">
     <div style="display: flex; center; max-width: 1000px; margin: 30px auto; padding: 0 20px;">
       <!-- Facebook Icon (Left) -->
       <a href="https://www.facebook.com/share/1DMVNCLjdH/?mibextid=LQQJ4d" target="_blank">
@@ -267,108 +189,4 @@
     </div>
   </div>
 </body>
-
 </html>
-=======
-  <hr style="height: 10px; width: 80%; background-color: black; border: none; margin-left: 95px; margin-top: 30px;">
-
-  <!-- Product Gallery -->
-  <div class="product-gallery">
-    <!-- Product Card 1 -->
-    <div class="product-card">
-      <img src="./image/1.jpeg" alt="Product 1">
-    </div>
-
-    <!-- Product Card 2 -->
-    <div class="product-card">
-      <img src="./image/2.jpeg" alt="Product 2">
-      <div>
-      </div>
-    </div>
-    <!-- Product Card 3 -->
-    <div class="product-card">
-      <img src="./image/4.jpeg" alt="Product 3">
-    </div>
-
-    <!-- Product Card 4 -->
-    <div class="product-card">
-      <img src="./image/3.jpeg" alt="Product 4">
-    </div>
-
-    <!-- Product Card 5 -->
-    <div class="product-card">
-      <img src="./image/5.jpg" alt="Product 5">
-    </div>
-
-    <!-- Product Card 6 -->
-    <div class="product-card">
-      <img src="./image/6.jpg" alt="Product 6">
-    </div>
-    <!-- Product Card 3 -->
-    <div class="product-card">
-      <img src="./image/7.jpg" alt="Product 3">
-    </div>
-
-    <!-- Product Card 4 -->
-    <div class="product-card">
-      <img src="./image/8.jpg" alt="Product 4">
-    </div>
-
-    <!-- Product Card 5 -->
-    <div class="product-card">
-      <img src="./image/9.jpg" alt="Product 5">
-    </div>
-
-  </div>
-  </div>
-  <div class="contact">
-    <div style="display: flex; center; max-width: 1000px; margin: 30px auto; padding: 0 20px;">
-      <!-- Facebook Icon (Left) -->
-      <a href="https://www.facebook.com/share/1DMVNCLjdH/?mibextid=LQQJ4d" target="_blank">
-        <img src="./image/download.png" alt="Facebook" width="100px">
-      </a>
-
-      <!-- Centered Text -->
-      <p style="flex-grow: 1; font-size: 18px; display: flex; align-items: center; gap: 6px;">
-        <a href="https://www.facebook.com/share/1DMVNCLjdH/?mibextid=LQQJ4d" target="_blank"
-          style="text-decoration: none; color: #1877F2; font-weight: bold;">
-          ສາມາດ ເບິ່ງຂໍ້ມູນໄດ້ທີ່ນີ່
-        </a>
-      </p>
-    </div>
-    <div style="display: flex; center; max-width: 1000px; margin: 30px auto; padding: 0 20px;">
-      <!-- Facebook Icon (Left) -->
-      <a href="https://wa.me/message/37542Q2IROJNF1" target="_blank">
-        <img
-          src="./image/png-clipart-whatsapp-computer-icons-icon-design-internet-whatsapp-trademark-logo-thumbnail-removebg-preview.png"
-          alt="Facebook" width="100px">
-      </a>
-
-      <!-- Centered Text -->
-      <p style="flex-grow: 1; font-size: 18px; display: flex; align-items: center; gap: 6px;">
-        <a href="https://wa.me/message/37542Q2IROJNF1" target="_blank"
-          style="text-decoration: none; color: #1877F2; font-weight: bold;">
-          ສາມາດ ຕິດຕໍ່ສອບຖາມ
-        </a>
-      </p>
-    </div>
-    <div style="display: flex; center; max-width: 1000px; margin: 30px auto; padding: 0 20px;">
-      <!-- Facebook Icon (Left) -->
-      <a href="www.tiktok.com/@pmautogate" target="_blank">
-        <img
-          src="/image/vecteezy_tiktok-png-icon_16716485.png"
-          alt="Facebook" width="70px">
-      </a>
-
-      <!-- Centered Text -->
-      <p style="flex-grow: 1; font-size: 18px; display: flex; align-items: center; gap: 6px;">
-        <a href="www.tiktok.com/@pmautogate" target="_blank"
-          style="text-decoration: none; color: #1877F2; font-weight: bold;">
-          ຜົນງານ ຂອງເຮົາ
-        </a>
-      </p>
-    </div>
-  </div>
-
-</html>
->>>>>>> bb174ee3eef0be98c678a811256122583f0f44ab
